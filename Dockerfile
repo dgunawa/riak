@@ -8,4 +8,6 @@ RUN echo "riak ALL = NOPASSWD : ALL" > /etc/sudoers
 
 USER riak
 
-CMD ["sudo /usr/lib/riak/riak-cluster.sh"]
+COPY start.sh /usr/lib/riak/start.sh
+
+CMD ["/usr/lib/riak/start.sh"]
